@@ -7,19 +7,16 @@ import { Question } from '../model/question';
 })
 export class PersonalityTestService {
   constructor() {}
-  personalityType:string = '';
+  personalityType: string = '';
 
   getQuestions(): Question[] {
-    return questions;
+    // Returns Shuffled Question
+    return questions.sort(() => 0.5 - Math.random());
   }
 
-  submitResult():void{
+  submitResult(): void {}
 
-  }
-
-  getAnswer():string{
+  getAnswer(): string {
     return this.personalityType;
   }
-
-
 }

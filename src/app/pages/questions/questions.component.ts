@@ -12,12 +12,14 @@ export class QuestionsComponent implements OnInit {
 
   constructor(private ptService: PersonalityTestService,private router:Router) {}
 
+  // Declarations
   questions: Question[] = [];
   answers: string[] = [];
   currentAnswer: Choice = { personalityType: '', option: '' };
   totalQuestion: number = 0;
   currentQuestion: Question = { question: '', choices: [] };
   index: number = 1;
+
 
   ngOnInit(): void {
     this.questions = this.ptService.getQuestions();
@@ -44,6 +46,7 @@ export class QuestionsComponent implements OnInit {
       this.index += 1;
     }
   }
+
 
   changeQuestion(): void {
     this.currentAnswer = { personalityType: '', option: '' };

@@ -38,7 +38,7 @@ export class QuestionsComponent implements OnInit {
   onNext(isDone: boolean): void {
     this.answers = [...this.answers, this.currentAnswer?.personalityType];
     if (isDone) {
-      // this.ptService.
+      this.ptService.submitResult(this.answers);
       this.router.navigate(['/result'])
       this.answers = [];
     } else {

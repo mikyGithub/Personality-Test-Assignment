@@ -1,0 +1,45 @@
+<div class="steps">
+  <nz-steps [nzCurrent]="index" nzProgressDot>
+    <nz-step
+      *ngFor="let question of [].constructor(totalQuestion + 1)"
+    ></nz-step>
+  </nz-steps>
+</div>
+<div class="question-container">
+  <span class="question-counter"
+    >QUESTION {{ index }}/{{ totalQuestion }}</span
+  >
+  <h2>{{ currentQuestion?.question }}</h2>
+  <button
+    (click)="onAnswerSelect(choice)"
+    *ngFor="let choice of currentQuestion.choices"
+    class="btn-choice"
+    [ngClass]="{
+      'selected-answer': choice?.option === currentAnswer?.option
+    }"
+  >
+    {{ choice?.option }}
+  </button>
+  <div class="navigation-container">
+    <button
+      nz-button
+      class="btn-primary"
+      nzSize="large"
+      nzType="primary"
+      (click)="onPrevious()"
+      *ngIf="index > 1"
+    >
+      <span>Previous</span>
+    </button>
+    <button
+    [disabled]="currentAnswer?.option === ''"
+      class="btn-primary"
+      nz-button
+      nzSize="large"
+      nzType="primary"
+      (click)="onNext(index === totalQuestion)"
+    >
+      <span>{{ index < totalQuestion ? "Next" : "Done" }}</span>
+    </button>
+  </div>
+</div>

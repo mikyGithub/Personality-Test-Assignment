@@ -10,11 +10,14 @@ export class PersonalityTestService {
   personalityType: string = '';
 
   getQuestions(): Question[] {
-    // Returns Shuffled Question
+    // Returns shuffled question
     return questions.sort(() => 0.5 - Math.random());
   }
 
-  submitResult(): void {}
+  submitResult(answers:string[]): void {
+    // Computes personality type based on the given answers
+    this.personalityType = answers.filter(answer => answer === 'introvert').length>2 ? 'introvert' : 'extrovert';
+  }
 
   getAnswer(): string {
     return this.personalityType;

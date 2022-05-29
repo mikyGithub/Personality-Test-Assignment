@@ -1,3 +1,4 @@
+import { PersonalityTestService } from './../../service/personality-test.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ptService:PersonalityTestService) { }
 
+  personalityTrait:string = '';
   ngOnInit(): void {
+    this.personalityTrait = this.ptService.getAnswer();
   }
 
 }

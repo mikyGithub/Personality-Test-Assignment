@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap");
-* {
-  font-family: "Ubuntu", sans-serif;
-}
+@import './styles/fonts.scss';
+@import './styles/colors.scss';
 .container {
   background-color: #e6d7b8;
   width: 100vw;
@@ -10,39 +8,12 @@
   align-items: center;
   justify-content: center;
 }
-.card {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  width: 100vw;
-  min-height: 60vh;
-  border: 1px solid #ff8b0e94;
-}
-.btn-primary {
-  margin-top: 3px;
-  width: 100%;
-}
-.btn-choice {
-  outline: none;
-  cursor: pointer;
-  width: 100%;
-  background-color: #fff;
-  border: 1px solid #eae7e7;
-  margin: 3px 0px;
-  border-radius: 5px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-}
 .question-container {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-.btn-choice:hover {
-  border: 1px solid #ff8b0e94;
 }
 .choice-container {
   width: 100%;
@@ -56,8 +27,44 @@
   width: 100%;
   text-align: center;
 }
+.navigation-container {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card {
+  padding: 20px;
+  background-color: $white;
+  border-radius: 10px;
+  width: 100vw;
+  min-height: 60vh;
+  border: 1px solid $border-color;
+}
+.btn-primary {
+  margin-top: 3px;
+  width: 100%;
+}
+.btn-choice {
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid #eae7e7;
+  margin: 3px 0px;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.btn-choice:hover {
+  border: 1px solid $border-color;
+}
 .question-counter {
-  color: #ff8c0e;
+  color: $primary;
   font-size: 10px;
   font-weight: bold;
 }
@@ -68,16 +75,8 @@
   margin-bottom: 20px;
 }
 .selected-answer {
-  background-color: #ff8c0e5c;
-  border: 1px solid #ff8b0e94;
-}
-.navigation-container {
-  width: 100%;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  background-color: $primary-light;
+  border: 1px solid $border-color;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

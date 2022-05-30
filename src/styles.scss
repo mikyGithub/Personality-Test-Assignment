@@ -10,20 +10,29 @@
   align-items: center;
   justify-content: center;
 }
-
 .card {
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
-  width: 40vw;
+  width: 100vw;
   min-height: 60vh;
   border: 1px solid #ff8b0e94;
 }
-
-.question-counter {
-  color: #ff8c0e;
-  font-size: 10px;
-  font-weight: bold;
+.btn-primary {
+  margin-top: 3px;
+  width: 100%;
+}
+.btn-choice {
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eae7e7;
+  margin: 3px 0px;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 .question-container {
   margin-top: 50px;
@@ -32,40 +41,79 @@
   align-items: center;
   justify-content: space-between;
 }
-.btn-choice {
-  outline: none;
-  cursor: pointer;
-  width: 100%;
-  background-color: #fff;
-  border: 1px solid #eae7e7;
-  margin: 6px 0px;
-  border-radius: 5px;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-}
-
 .btn-choice:hover {
   border: 1px solid #ff8b0e94;
 }
-
-.navigation-container {
+.choice-container{
   width: 100%;
-  margin-top: 30px;
+}
+.welcome-container{
+  margin: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
-
-.btn-primary {
-  width: 40%;
+.question-counter {
+  color: #ff8c0e;
+  font-size: 10px;
+  font-weight: bold;
 }
-
+.hero-img{
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
 .selected-answer{
   background-color: #ff8c0e5c;
   border: 1px solid #ff8b0e94;
 }
+.navigation-container {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
-.steps{
-  margin-left: -60px;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 80vw;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 60vw;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 40vw;
+  }
+
+  .btn-choice {
+    margin: 6px 0px;
+    padding: 15px;
+  }
+  .welcome-container{
+    width: 50%;
+  }
+  .btn-primary {
+    margin-top: 0px;
+    width: 40%;
+  }
+  .navigation-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
 }

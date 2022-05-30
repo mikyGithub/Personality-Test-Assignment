@@ -1,0 +1,14 @@
+<div >
+
+  <button
+  (click)="onAnswerSelect(choice)"
+
+  class="btn-choice"
+  [ngClass]="{
+    'selected-answer': choice?.option === currentAnswer?.option
+  }"
+  >
+  {{ choice?.option }}
+  </button>
+
+</div>

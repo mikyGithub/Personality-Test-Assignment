@@ -6,12 +6,14 @@
   <img class="hero-img" src="https://www.psychologies.co.uk/wp-content/uploads/sites/3/2018/05/introvert_or_extrovert-1-scaled.jpg" alt="">
   <h1>You are {{personalityTrait}}</h1>
   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque eveniet mollitia voluptates inventore aut libero doloremque minus quaerat nam dolorem illo voluptatibus fugiat quas quod praesentium eligendi, aliquid autem fuga.</p>
-  <button routerLink="/question" class="btn-primary" nz-button nzSize="large" nzType="primary">
-    Retake
-  </button>
-  <button routerLink="/welcome" class="btn-primary" nz-button nzSize="large" nzType="primary">
-    Back To Home
-  </button>
+  <div class="navigation-container">
+    <button routerLink="/question" class="btn-primary" nz-button nzSize="large" nzType="primary">
+      Retake
+    </button>
+    <button routerLink="/welcome" class="btn-primary" nz-button nzSize="large" nzType="primary">
+      Back To Home
+    </button>
+    </div>
 </div>
 </ng-container>
 <ng-template #backToHomeTemplate>
